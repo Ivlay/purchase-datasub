@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:latest
+    container_name: purchase
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: purchase
+    ports:
+      - 27017:27017
